@@ -1,0 +1,25 @@
+.navbar{
+    position: relative;
+    top: 5px;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0);
+}
+.navbar ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .navbar li {
+    margin: 1em;
+    padding: 0;
+  }
+  
+  .navbar a {
+    display: block;
+    padding: 1rem;
+    text-decoration: none;
+    color: rgb(251, 245, 245);
+  }
