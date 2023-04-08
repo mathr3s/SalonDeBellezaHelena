@@ -47,3 +47,14 @@
 .card-img-top{
   height: 380px;
 }
+
+.btn-outline-success {
+  background:  white !important;
+  color: black;
+  border-color: rgb(255, 187, 219);
+  
+}
+
+footer {
+  background-color:rgb(255, 187, 219) !important;
+}
