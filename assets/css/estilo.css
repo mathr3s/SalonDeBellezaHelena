@@ -3,7 +3,7 @@
     top: 5px;
     left: 0;
     width: 100%;
-    background-color: rgba(250, 32, 116, 0);
+    background-color: rgba(65, 250, 32, 0);
 }
 .navbar ul {
     margin: 0;
@@ -74,4 +74,14 @@ footer {
 
 .form-label{
   color: white !important;
+}
+.card{
+  background: none;
+  border-radius: 20px;
+  box-shadow: 0 5px 5px rgb(142, 134, 134);
+  
+}
+.logo{
+  border-radius: 50%;
+  box-shadow: 0 5px 50px  rgb(252, 248, 248);
 }
