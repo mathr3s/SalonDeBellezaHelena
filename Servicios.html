@@ -1,82 +1,228 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-      <meta charset="UTF-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Servicios</title>
-      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
-          integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
-      <!-- ICONOS BOOTSTRAP -->
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
-      <link rel="stylesheet" href="assets/css/estilo.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+    <!-- ICONOS BOOTSTRAP -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="assets/css/estilo.css">
   </head>
-
+  
   <body style="background: linear-gradient(rgb(226, 168, 168),rgb(204, 204, 204));">
-
+  
     <!--contenido central de la pagina-->
     <div class="container">
       <!--barra de navegacion-->
       <nav class="navbar navbar-expand-lg ">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="index.html"><img src="assets/img/logoberni.png" alt="" class="logo" width="150"
-            height="150"></a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
-          aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse barra_central px-5  " id="navbarText">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link " aria-current="page" href="Servicios.html">Servicios</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="Productos.html">Productos</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="Contactos.html">Contacto</a>
-            </li>
-            <li class="nav-item">
-            <a class="nav-link " aria-current="page" href="Promociones.html">Promociones</a>
-          </li>
-          <li class="nav-item d-flex justify-content-center align-content-center align-items-center">
-            <!--Boton de busqueda-->
-            <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
-            <button class="btn btn-outline-success me-4"  type="submit">Buscar</button>
-          </li>
-          </ul>
-          <button type="button" class="btn btn-secondary position-relative pt-0 px-2 float-end float-lg-none">
-            <i class="bi bi-cart4" style="font-size: 20px;"></i>
-            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-              99+
-              <span class="visually-hidden">unread messages</span>
-            </span>
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html"><img src="assets/img/logoberni.png" alt=""  class="logo" width="150"
+              height="150"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
+            aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
           </button>
+          <div class="collapse navbar-collapse barra_central px-5  " id="navbarText">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link " aria-current="page" href="Servicios.html">Servicios</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="Productos.html">Productos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="Contactos.html">Agendar</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " aria-current="page" href="Promociones.html">Promociones</a>
+              </li>
+              <li class="nav-item d-flex justify-content-center align-content-center align-items-center">
+                <!--Boton de busqueda-->
+                <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
+                <button class="btn btn-outline-success me-4" type="submit">Buscar</button>
+              </li>
+            </ul>
+            <button type="button" class="btn btn-secondary position-relative pt-0 px-2 float-end float-lg-none">
+              <i class="bi bi-cart4" style="font-size: 20px;"></i>
+              <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                99+
+                <span class="visually-hidden">unread messages</span>
+              </span>
+            </button>
+          </div>
         </div>
-      </div>
       </nav>
+      <section>
+        <div class="row">
+        <div class="col-sm">
+          <div id="producto1">
+            <div class="card" style="width: 18rem;">
+              <img src="assets/img/alisados (1).jpeg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Alisado Permanente</h5>
+                <p class="card-text">El alisado permanente es un tratamiento que te deja el cabello liso por mas tiempo que uno tradicional. Es una buena opción si no te gusta tu cabello rizado o con frizz. Te dejará con un cabello suave y fácil de peinar.</p>
+              </div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">Consultar por su presupuesto.</li>
+              </ul>
+              <div class="card-body">
+                <a href="Contactos.html" class="card-link">Pedir hora</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm">
+          <div id="producto2">
+            <div class="card" style="width: 18rem;">
+              <img src="assets/img/balage (1).jpeg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Balayage</h5>
+                <p class="card-text">El balayage es una técnica de coloración gradual y difuminada que crea un efecto degradado en el cabello. Es una opción popular para un look natural y luminoso. Se puede personalizar según el tono y la textura del cabello.</p>
+              </div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">Consultar por su presupuesto.</li>
+              </ul>
+              <div class="card-body">
+                <a href="Contactos.html" class="card-link">Pedir hora</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm">
+          <div id="producto3">
+            <div class="card" style="width: 18rem;">
+              <img src="assets/img/bloques (2).jpeg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Bloques de color</h5>
+                <p class="card-text">Un bloque de color es una técnica de teñido del cabello en la que se aplica un solo color uniforme en todo el cabello, creando un aspecto llamativo y audaz. Puede ser un color brillante o un tono más oscuro o más claro que el color natural del cabello.
+              </div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">Consultar por su presupuesto</li>
+              </ul>
+              <div class="card-body">
+                <a href="Contactos.html" class="card-link">Pedir hora</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm">
+          <div id="producto4">
+            <div class="card" style="width: 18rem;">
+              <img src="assets/img/coloracion (1).jpeg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Coloracion</h5>
+                <p class="card-text">La coloración del cabello es el proceso de teñir el cabello con un tinte permanente, semipermanente o temporal. Se puede utilizar para cambiar el tono del cabello o para añadir reflejos. La coloración del cabello puede ser personalizada para crear un look único y favorecedor para cada persona.</p>
+              </div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">Consultar por su presupuesto</li>
+              </ul>
+              <div class="card-body">
+                <a href="Contactos.html" class="card-link">Pedir hora</a>
+              </div>
+            </div>
+          </div>
+        </div>
 
+        <div class="col-sm">
+          <div id="producto5">
+            <div class="card" style="width: 18rem;">
+              <img src="assets/img/corte (1).jpeg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Corte de cabello</h5>
+                <p class="card-text">Se realiza un  corte de cabello para crear una forma, longitud y estilo específicos. Se puede personalizar para adaptarse a la textura del cabello, la forma de la cara y el estilo de vida de la persona.</p>
+              </div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">Consultar por su presupuesto</li>
+              </ul>
+              <div class="card-body">
+                <a href="Contactos.html" class="card-link">Pedir hora</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div id="producto6">
+            <div class="card" style="width: 18rem;">
+              <img src="assets/img/mechas (2).jpeg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Mechas</h5>
+                <p class="card-text">Las mechas son una técnica de coloración del cabello en la que se aplican secciones de cabello selectivas y se las aclara para crear un contraste con el resto del cabello. Las mechas pueden ser sutiles o audaces y añaden dimensión y profundidad al cabello.</p>
+              </div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">Consultar por su presupuesto</li>
+              </ul>
+              <div class="card-body">
+                <a href="Contactos.html" class="card-link">Pedir hora</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-sm mx-auto">
+          <div id="producto7">
+            <div class="card" style="width: 18rem;">
+              <img src="assets/img/mechas bab (1).jpeg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Mechas babylight</h5>
+                <p class="card-text">Las mechas Babylight son una técnica de coloración del cabello en la que se aplican finas mechas de cabello para lograr un efecto de iluminación natural. Se aplican de manera estratégica para añadir dimensión y brillo al cabello, creando un aspecto sutil y natural.</p>
+              </div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">Consultar por su presupuesto</li>
+              </ul>
+              <div class="card-body">
+                <a href="Contactos.html" class="card-link">Pedir hora</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+       <div class="col-sm mx-auto">
+          <div id="producto8">
+            <div class="card" style="width: 18rem;">
+              <img src="assets/img/tratamientoCap (1).jpeg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Tratamiento capilar</h5>
+                <p class="card-text">El tratamiento capilar es un proceso para mejorar la salud y apariencia del cabello mediante la hidratación, nutrición, reparación y fortalecimiento del mismo. Se personaliza según las necesidades de cada cabello.</p>
+              </div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">Consultar por su presupuesto</li>
+              </ul>
+              <div class="card-body">
+                <a href="Contactos.html" class="card-link">Pedir hora</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+      </section>
+  
       <!--Contenedor Principal-->
       <div class="container-fluid">
-
-      </div>  
-
+  
+      </div>
+  
       <!--pie de pagina-->
-      <footer class=""> 
+      <footer class="">
         <div class="mb-3">
           <span class="mx-2 fs-3"><i class="bi bi-whatsapp"></i></span>
           <span class="mx-2 fs-3"><i class="bi bi-facebook"></i></span>
           <span class="mx-2 fs-3"><i class="bi bi-instagram"></i></span>
           <a class="btn btn-light" href="contacto.html"><span class="mx-1 fs-5">CONTACTO</i></span></a>
         </div>
-        <div>        © 2023 TODOS LOS DERECHOS RESERVADOS.</div>
+        <div> © 2023 TODOS LOS DERECHOS RESERVADOS.</div>
+        <p>APRENDIENDO HTML 2023.</p>
       </footer>
     </div>
-
-
+  
+  
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N"
       crossorigin="anonymous"></script>
-  </body>
-
+</body>
 </html>
