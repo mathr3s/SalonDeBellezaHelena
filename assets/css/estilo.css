@@ -39,8 +39,7 @@
   padding: 40px;
   border-radius: 40px;
 }
-.prueba{
-    background: #f8f9fa69;
+.border-rondo{
     border: none !important;
     border-radius: 30px !important;
 }
