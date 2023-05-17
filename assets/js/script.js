@@ -2,6 +2,9 @@ var carrito = [];
 
 // agregar
 function agregarAlCarrito(nombre, precio, imagen) {
+  console.log("Agregue nombre", nombre)
+  console.log("Agregue precio", precio)
+  console.log("Agregue imagen", imagen)
   var item = { nombre: nombre, precio: precio, imagen: imagen };
   carrito.push(item);
   actualizarCarrito();
