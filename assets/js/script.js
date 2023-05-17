@@ -1,4 +1,6 @@
 var carrito = [];
+const miLocalStorage = window.localStorage;
+
 
 // agregar
 function agregarAlCarrito(nombre, precio, imagen) {
@@ -47,6 +49,10 @@ function vaciarCarrito() {
   actualizarCarrito();
 }
 
+
+function cuentaCarrito(){
+  return(carrito.length)
+}
 
 //agregarAlCarrito("VITAMINO COLOR L'ORÉALnono", 25000, "assets/img/producto1.jpg");
 
