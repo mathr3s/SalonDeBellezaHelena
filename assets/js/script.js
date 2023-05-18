@@ -15,7 +15,6 @@ function agregarAlCarrito(id_producto) {
     "imagen":imagen,
     "cantidad": 1
   }
-
   // Aqui agreamos el item producto al carro mediante la funcion push
 
   // Funcion de Javascript FindIndex

@@ -42,3 +42,29 @@ function onSubmit(event) {
     return false;
   }
   
+  function envioDelFormulario(id_usuario)
+    // Función de Javascript querySelector
+    // Obtiene un elemento HTML filtrado por una Clase, ID o Tag HTML.
+    let elemento = document.querySelector("#usuario"+id_usuario);
+    let email = elemento.getElementById('email').textContent;
+    let nombre = elemento.querySelector(".card-title").textContent;
+  
+    let item = {
+      "id": id_usuario,
+      "nombre":nombre,
+      "email":email,
+      "cantidad": 1
+    }
+let envioDelFormulario = carrito.findIndex(item => item.id == id_usuario)
+
+
+  if(envioDelFormulario > -1){
+    carrito[envioDelFormulario].cantidad++;
+    alert("Formulario Registrado");
+  }else{
+    // Funcion de Javascript Push
+    // Función para agregar un elemento a una Array o Lista.  
+    carrito.push(item);
+    alert("Formulario Registrado Correctamente");
+  }
+  
