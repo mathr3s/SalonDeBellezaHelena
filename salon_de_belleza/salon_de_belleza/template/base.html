@@ -1,57 +1,93 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title  %}{% endblock title %}</title>
+    <title>{% block title %}{% endblock title %}</title>
     <link rel="stylesheet" href="{% static 'css/bootstrap/bootstrap.min.css' %}" />
-    {% block css  %}{% endblock css %}
+    {% block css %}{% endblock css %}
 </head>
-<body>
-    <div class="container" >
-        <nav class="navbar navbar-expand-lg ">
-            <div class="container-fluid">
-              <a class="navbar-brand" href="index.html"><img src="assets/img/logoberni.png" alt="" class="logo" width="150"
-                  height="150"></a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
-                aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse barra_central px-5  " id="navbarText">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                  <li class="nav-item">
-                    <a class="nav-link " aria-current="page" href="Servicios.html">Servicios</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="Productos.html">Productos</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="Contactos.html">Agendar</a>
-                  </li>
-                  <li class="nav-item">
-                  <a class="nav-link " aria-current="page" href="Promociones.html">Promociones</a>
-                </li>
-                <li class="nav-item d-flex justify-content-center align-content-center align-items-center">
-                  <!--Boton de busqueda-->
-                  <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
-                  <button class="btn btn-outline-success me-4"  type="submit">Buscar</button>
-                </li>
-                </ul>
-                <a href="CarritoCompras.html">
-                  <button type="button" class="btn btn-secondary position-relative pt-0 px-2 float-end float-lg-none">
-                    <i class="bi bi-cart4" style="font-size: 20px;"></i>
-                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-                      0
-                      <span class="visually-hidden">unread messages</span>
-                    </span>
-                  </button>
-                </a>
-                
-              </div>
-            </div>
-            </nav>
-    </div>
+
+<body style="background: linear-gradient(rgb(226, 168, 168),rgb(204, 204, 204));">
+  <div class="container">
+    <nav class="navbar navbar-expand-lg ">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index"><img src="{% static 'img/logoberni.png' %}" alt="" class="logo"
+            width="150" height="150"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
+          aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse barra_central px-5  " id="navbarText">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              {% if active_servicios %}
+              <a class="nav-link {{active_servicios}} " aria-current="page" href="/servicios">Servicios</a>
+              {% else %}
+              <a class="nav-link" href="/servicios">Contacto</a>
+              {% endif %}
+            </li>
+            <li class="nav-item">
+              {% if active_productos %}
+              <a class="nav-link {{active_productos}} " href="/productos">Productos</a>
+              {% else %}
+              <a class="nav-link" href="/productos">Productos</a>
+              {% endif %}
+            </li>
+            <li class="nav-item">
+              {% if active_contactos %}
+              <a class="nav-link {{active_contactos}}" href="/contactos">Agendar</a>
+              {% else %}
+              <a class="nav-link" href="/contactos">Agendar</a>
+              {% endif %}
+            </li>
+            <li class="nav-item">
+              {% if active_promociones %}
+              <a class="nav-link {{active_promociones}} " aria-current="page" href="promociones">Promociones</a>
+              {% else %}
+              <a class="nav-link" href="/promociones">Promociones</a>
+              {% endif %}
+            </li>
+            <li class="nav-item d-flex justify-content-center align-content-center align-items-center">
+              <!--Boton de busqueda-->
+              <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
+              <button class="btn btn-outline-success me-4" type="submit">Buscar</button>
+            </li>
+          </ul>
+          <a href="CarritoCompras.html">
+            <button type="button" class="btn btn-secondary position-relative pt-0 px-2 float-end float-lg-none">
+              <i class="bi bi-cart4" style="font-size: 20px;"></i>
+              <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                0
+                <span class="visually-hidden">unread messages</span>
+              </span>
+            </button>
+          </a>
+
+        </div>
+      </div>
+    </nav>
+    <!-- CONTENIDO DINÁMICO -->
+    {% block content %}{% endblock content %}
+    <!--pie de pagina-->
+    <script src="{% static 'js/script.js %}"></script>
+    <script src="{% static 'js/boostrap/bootstrap.bundle.min.js' %}"></script>
+
+    <footer class="">
+      <div class="mb-3">
+        <span class="mx-2 fs-3"><i class="bi bi-whatsapp"></i></span>
+        <span class="mx-2 fs-3"><i class="bi bi-facebook"></i></span>
+        <span class="mx-2 fs-3"><i class="bi bi-instagram"></i></span>
+        <a class="btn btn-light" href="Contactos.html"><span class="mx-1 fs-5">CONTACTO</i></span></a>
+        <a class="nav-link " aria-current="page" href="Contactos.html"></a>
+      </div>
+      <div> © 2023 TODOS LOS DERECHOS RESERVADOS.</div>
+      <p>APRENDIENDO HTML 2023.</p>
+    </footer>
+  </div>
 </body>
+
 </html>

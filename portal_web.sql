@@ -1,4 +1,4 @@
-use portal_web;
+use docker_mysql;
 
 
 create table region(

@@ -1,0 +1,99 @@
+{% extends "base.html" %}{% load static %}
+{% block title %}Productos{% endblock title %}
+{% block content %}
+
+<div class="container">
+
+    <!--Contenedor Principal-->
+
+
+    <div class="container-fluid">
+        <div class="container-fluid contenedor-contacto p-5">
+            <form id="frm_contacto" class="needs-validation" novalidate method="POST" action=""
+                onsubmit="return onSubmit()">
+                <h2 class="text-center mt-4">Ingresa tus Datos</h2>
+                <div class="mb-3">
+                    <label id="lbl-nombres" for="txt-nombres" class="form-label">Nombre</label>
+                    <input id="txt-nombres" name="nombres" type="text" class="form-control border-rondo"
+                        placeholder="****" required maxlength="30">
+                    <div class="invalid-feedback">
+                        Ingresar informacion
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label id="lbl-apellido-paterno" for="txt-apellido-paterno" class="form-label">Apellido
+                        Paterno</label>
+                    <input id="lbl-apellido-paterno" name="apellido-paterno" type="text"
+                        class="form-control border-rondo" placeholder="****" required>
+                    <div class="invalid-feedback">
+                        Ingresar informacion
+                    </div>
+
+                </div>
+                <div class="mb-3">
+                    <label id="lbl-mail" for="txt-mail" class="form-label">Email</label>
+                    <input id="txt-mail" name="mail" type="email" class="form-control border-rondo"
+                        placeholder="****@gmail.com" required>
+                    <div class="invalid-feedback">
+                        Ingresar mail valido.
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label id="lbl-telefono" for="txt-telefono" class="form-label">Teléfono</label>
+                    <input id="txt-telefono" name="telefono" type="tel" class="form-control border-rondo"
+                        placeholder="+569" required>
+                    <div class="invalid-feedback">
+                        Ingresar informacion
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label id="lbl-fecha" for="txt-fecha" class="form-label">Fecha</label>
+                    <input id="txt-fecha" name="fecha" type="date" class="form-control border-rondo" required>
+                    <div class="invalid-feedback">
+                        Ingresar informacion
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label id="lbl-hora" for="txt-hora" class="form-label">Hora</label>
+                    <input id="txt-hora" name="hora" type="time" class="form-control border-rondo" required>
+                    <div class="invalid-feedback">
+                        Ingresar informacion
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label id="lbl-motivo" for="txt-motivo" class="form-label  ">Motivo de la Cita</label>
+                    <select id="lbl-motivo" name="motivo" class="border-rondo">
+                        <option value=""></option>
+                        <option value="Corte">Tratamiento capilar</option>
+                        <option value="Alisado">Balayage</option>
+                        <option value="Rizos">Bloques de color</option>
+                        <option value="Rizos">Coloracion</option>
+                        <option value="Rizos">Corte de cabello</option>
+                        <option value="Rizos">Mechas</option>
+                        <option value="Rizos">Mechas babylight</option>
+                        <option value="Rizos">Alisado permanente</option>
+                        <option value="Rizos">Rizos</option>
+                        <option value="otros">Otros</option>
+                    </select>
+                    <label for="txt-comentarios">Agregue comentarios adicionales</label>
+                    <textarea id="txt-comentarios" name="comentarios" cols="30" rows="10" class="form-control"
+                        placeholder="Agregue algun comentario adicional" required></textarea>
+                    <div class="invalid-feedback">
+                        Ingresar informacion
+                    </div>
+                </div>
+                <div>
+                    <button class="btn btn-primary" type="submit">Enviar</button>
+                </div>
+                <div>
+                    <input type="reset" id="reset">
+                </div>
+            </form>
+            <div id="successMessage" style="display: none;" class="alert alert-success mt-3">
+                Formulario enviado exitosamente.
+            </div>
+        </div>
+    </div>
+</div>

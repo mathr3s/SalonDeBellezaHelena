@@ -78,10 +78,10 @@ WSGI_APPLICATION = 'salon_de_belleza.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql', 
-        'NAME':"salon_de_belleza_db",
+        'NAME':"docker_mysql",
         'USER': "root",
-        'PASSWORD': "12345",
-        'HOST': "127.0.0.1",   # Or an IP Address that your DB is hosted on
+        'PASSWORD': "123456",
+        'HOST': "localhost",   # Or an IP Address that your DB is hosted on
         'PORT': "3306",
         'OPTIONS': {
             'sql_mode': 'traditional',
