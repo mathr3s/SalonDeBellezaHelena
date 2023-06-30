@@ -1,0 +1,115 @@
+{% extends "base.html" %}{% load static %}
+{% block title %}Productos{% endblock title %}
+{% block content %}
+
+
+
+<!--contenido central de la pagina-->
+<div class="container">
+
+    <!-- Cuerpo de pagina -->
+    <section class="container">
+        <div class="products d-flex justify-content-between align-items-stretch align-content-center">
+            <div id="producto1" class="card-container">
+                <div class="card">
+                    <img src="assets/img/producto1.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">VITAMINO COLOR L'ORÉAL
+                        </h5>
+                        <p class="card-text">Este tratamiento hace que el color dure hasta 8 semanas, su fórmula
+                            enriquecida con resveratrol un poderoso antioxidante, se ve mucho más brillante y luce
+                            más radiante. Ideal para cabellos con coloracion para una mejor duración de color..</p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">$24.990</li>
+                    </ul>
+                    <div class="card-body">
+                        <button onclick="agregarAlCarrito(1)" class="btn btn-primary">Añadir al carro</button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="producto2" class="card-container">
+                <div class="card">
+                    <img src="assets/img/producto2.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">PLASTICA DE ARGILA</h5>
+                        <p class="card-text">
+                            Tratamiento Capilar de componentes concentrados.
+                            Arcilla Blanca: regula la queratinizacion dando nutrición al cabello.
+                            Silicio Orgánico: Fortalece el bulbo capilar, evita la caída y aumenta densidad de
+                            cabello
+                            Ideal para cabellos débiles y frágiles(Con caída frecuente por el mal cuidado)</p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">$35.990</li>
+                    </ul>
+                    <div class="card-body">
+                        <button onclick="agregarAlCarrito(2)" class="btn btn-primary">Añadir al carro</button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="producto3" class="card-container">
+                <div class="card">
+                    <img src="assets/img/producto3.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">ABSOLUT REPAIR L'ORÉAL</h5>
+                        <p class="card-text">Este tratamiento repara el cabello dañado, la fibra se fortalece y
+                            restaura gracias a sus componentes de superalimentos como la quinoa y la proteina. Ideal
+                            para cabellos sobre-procesados y muy dañados..</p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">$24.990</li>
+                    </ul>
+                    <div class="card-body">
+                        <button onclick="agregarAlCarrito(3)" class="btn btn-primary">Añadir al carro</button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="producto4" class="card-container">
+                <div class="card">
+                    <img src="assets/img/producto4.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">BLONDIFIER COOL L'ORÉAL </h5>
+                        <p class="card-text">Este tratamiento está diseñado para dar Suavidad, Sedosidad y
+                            neutralizar los tonos amarillos no deseados en el cabello. Nutre el cabello
+                            instantáneamente dando brillo y luminosidad. Ideal para cabellos rubios.</p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">$24.990</li>
+                    </ul>
+                    <div class="card-body">
+                        <button onclick="agregarAlCarrito(4)" class="btn btn-primary">Añadir al carro</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Carrito Compras</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="w-100 text-center">Carrito Vacio</div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-primary">Finalizar Compra</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Barra de Indicadores API -->
+    <div class="indicadores-economicos d-flex justify-content-end align-items-center p-4"></div>
+    <!-- Pie de Pagina -->
+
+</div>
+
