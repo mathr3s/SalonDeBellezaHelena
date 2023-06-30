@@ -5,3 +5,6 @@ def home(request):
         return render(request, 'home.html')
     else:
         return redirect('/login/')
+    
+def productos(request):
+    return render(request, 'productos.html')

@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-u*8m1^%)rxdv7hbfpkoe8y0n$q_!j(mg7(h)s_lnfi7a#oaq8g
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', '192.168.1.160']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -78,16 +78,30 @@ WSGI_APPLICATION = 'salon_de_belleza.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql', 
-        'NAME': os.getenv('DB_NAME'),
-        'USER': os.getenv('DB_USER'),
-        'PASSWORD': os.getenv('DB_PASS'),
-        'HOST': os.getenv('DB_HOST'),   # Or an IP Address that your DB is hosted on
-        'PORT': os.getenv('DB_PORT'),
+        'NAME':"salon_de_belleza_db",
+        'USER': "root",
+        'PASSWORD': "12345",
+        'HOST': "127.0.0.1",   # Or an IP Address that your DB is hosted on
+        'PORT': "3306",
         'OPTIONS': {
             'sql_mode': 'traditional',
         }        
     }
 }
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql', 
+#         'NAME': os.getenv('DB_NAME'),
+#         'USER': os.getenv('DB_USER'),
+#         'PASSWORD': os.getenv('DB_PASS'),
+#         'HOST': os.getenv('DB_HOST'),   # Or an IP Address that your DB is hosted on
+#         'PORT': os.getenv('DB_PORT'),
+#         'OPTIONS': {
+#             'sql_mode': 'traditional',
+#         }        
+#     }
+# }
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators

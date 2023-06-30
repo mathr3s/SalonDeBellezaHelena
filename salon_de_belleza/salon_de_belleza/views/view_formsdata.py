@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from ayuda_perruna.models.models import Contact
+from salon_de_belleza.models.models import Contact
 
 def formsdata(request):
     return render(request, 'forms-data.html', {'active_formsdata': 'active'})
