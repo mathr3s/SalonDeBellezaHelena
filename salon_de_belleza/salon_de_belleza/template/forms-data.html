@@ -9,8 +9,8 @@
 
     <div class="container-fluid">
         <div class="container-fluid contenedor-contacto p-5">
-            <form id="frm_contacto" class="needs-validation" novalidate method="POST" action=""
-                onsubmit="return onSubmit()">
+            <form id="frm_contacto" class="needs-validation" novalidate method="POST" action="/forms-data/guardar"
+                onsubmit="return onSubmit()">{% csrf_token %}
                 <h2 class="text-center mt-4">Ingresa tus Datos</h2>
                 <div class="mb-3">
                     <label id="lbl-nombres" for="txt-nombres" class="form-label">Nombre</label>
@@ -97,3 +97,4 @@
         </div>
     </div>
 </div>
+{% endblock content %}

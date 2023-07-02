@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from salon_de_belleza.models.models import Contact
+from salon_de_belleza.models.models import Contacto
 
 def formsdata(request):
     return render(request, 'forms-data.html', {'active_formsdata': 'active'})
@@ -14,7 +14,7 @@ def guardar(request):
         apellidos = request.POST['apellidos']
         telefono = request.POST['telefono']
         # CRAENDO UN OBJETO DE TIPO MODEL (CRUD)
-        datos = Contact()
+        datos = Contacto()
         # ASIGNANDO VALORES A LOS ATRIBUTOS DEL OBJETO
         # DE TIPO MODEL
         datos.nombres = nombres

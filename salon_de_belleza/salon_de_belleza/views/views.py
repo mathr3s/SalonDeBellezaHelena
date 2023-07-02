@@ -2,9 +2,8 @@ from django.shortcuts import render
 
 #create your views here.
 
+
 def home(request):
-    return render(request, 'home.html')
+    return render(request, 'home.html',{'active_home': 'active'})
 
 
-def productos(request):
-    return render(request, 'productos.html')

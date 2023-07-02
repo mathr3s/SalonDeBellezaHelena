@@ -1,0 +1,22 @@
+{% extends "base.html" %}{% load static %}
+{% block title  %}FORMULARIO{% endblock title %}
+{% block content %}
+    {% if message %}
+        <div class="alert alert-success mt-2">
+            {{message}}
+        </div>
+        <p>nombres: {{datos.nombre}}</p>
+        <p>apellidos: {{datos.apellido}}</p>
+        <p>telefono: {{datos.telefono}}</p>
+        <p>mail: {{datos.mail}}</p>
+        <p>fecha: {{datos.fecha}}</p>
+        <p>hora: {{datos.hora}}</p>
+        <p>motivo: {{datos.motivo}}</p>
+        
+    {% endif %}
+    {% if message_error %}
+        <div class="alert alert-danger mt-2">
+            {{message_error}}
+        </div>
+    {% endif %}
+{% endblock content %}
