@@ -26,19 +26,19 @@ from salon_de_belleza.views import view_login
 from salon_de_belleza.views import view_servicios
 
 from django.contrib import admin
-#from salon_de_belleza.models.models import Contacto
+from salon_de_belleza.models.models import Contacto
 from django.contrib.contenttypes.models import ContentType
 from django.contrib.auth.models import Permission
 
 
-#admin.site.register(Contacto)
+admin.site.register(Contacto)
 #admin.site.register(ContentType)
 #admin.site.register(Permission)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', view_index.index),        
-    path('forms-data/', view_formsdata.formsdata),    
+    path('forms-data/', view_formsdata.formsdata ),    
     path('forms-data/guardar', view_formsdata.guardar),           
     path('login/', view_login.login), 
     path('home/', view_home.home),
