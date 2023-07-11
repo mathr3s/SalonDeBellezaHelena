@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-u*8m1^%)rxdv7hbfpkoe8y0n$q_!j(mg7(h)s_lnfi7a#oaq8g
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1']
 
 
 # Application definition
@@ -80,7 +80,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql', 
         'NAME':"docker_mysql",
         'USER': "root",
-        'PASSWORD':"123456",
+        'PASSWORD':"12345",
         'HOST': "127.0.0.1",   # Or an IP Address that your DB is hosted on
         'PORT': "3306",
         'OPTIONS': {
