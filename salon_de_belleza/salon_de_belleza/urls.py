@@ -24,6 +24,7 @@ from salon_de_belleza.views import view_productos
 from salon_de_belleza.views import view_promociones
 from salon_de_belleza.views import view_login
 from salon_de_belleza.views import view_servicios
+from salon_de_belleza.views import view_carritocompra
 
 from django.contrib import admin
 from salon_de_belleza.models.models import Contacto
@@ -45,6 +46,7 @@ urlpatterns = [
     path('logout', view_login.logout),
     path('productos/', view_productos.productos),
     path('promociones/', view_promociones.promociones),
-    path('servicios/', view_servicios.servicios)
+    path('servicios/', view_servicios.servicios),
+    path('CarritoCompras/', view_carritocompra.Carritocompra)
 ]
 

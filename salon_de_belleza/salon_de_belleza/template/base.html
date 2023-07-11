@@ -8,6 +8,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}{% endblock title %}</title>
     <link rel="stylesheet" href="{% static 'css/bootstrap/bootstrap.min.css' %}" />
+    <script src="{% static 'js/script.js' %}"></script>
+    <script src="https://kit.fontawesome.com/f5ef1ec7a4.js" crossorigin="anonymous"></script>
     {% block css %}{% endblock css %}
 </head>
 
@@ -15,7 +17,7 @@
   <div class="container">
     <nav class="navbar navbar-expand-lg ">
       <div class="container-fluid">
-        <a class="navbar-brand" href="index"><img src="{% static 'img/logoberni.png' %}" alt="" class="logo"
+        <a class="navbar-brand" href="/salon_de_belleza/salon_de_belleza/template/index.html"><img src="{% static 'img/logoberni.png' %}" alt="" class="logo"
             width="150" height="150"></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
           aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
@@ -56,10 +58,17 @@
               <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
               <button class="btn btn-outline-success me-4" type="submit">Buscar</button>
             </li>
+            <!-- <li class="nav-item">
+              {% if active_CarritoCompras %}
+              <a class="nav-link {{active_CarritoCompras}} " aria-current="page" href="CarritoCompras">CarritoCompras</a>
+              {% else %}
+              <a class="nav-link" href="/CarritoCompras">CarritoCompras</a>
+              {% endif %}
+            </li> -->
           </ul>
-          <a href="CarritoCompras.html">
+          <a href="/CarritoCompras">
             <button type="button" class="btn btn-secondary position-relative pt-0 px-2 float-end float-lg-none">
-              <i class="bi bi-cart4" style="font-size: 20px;"></i>
+              <i class="fa-solid fa-cart-shopping" style="font-size: 20px;" ></i>
               <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
                 0
                 <span class="visually-hidden">unread messages</span>
@@ -81,7 +90,7 @@
         <span class="mx-2 fs-3"><i class="bi bi-whatsapp"></i></span>
         <span class="mx-2 fs-3"><i class="bi bi-facebook"></i></span>
         <span class="mx-2 fs-3"><i class="bi bi-instagram"></i></span>
-        <a class="btn btn-light" href="forms-data"><span class="mx-1 fs-5">CONTACTO</i></span></a>
+        <a class="btn btn-light" href="/forms-data"><span class="mx-1 fs-5">CONTACTO</i></span></a>
         <a class="nav-link " aria-current="page" href="forms-data"></a>
       </div>
       <div> © 2023 TODOS LOS DERECHOS RESERVADOS.</div>
